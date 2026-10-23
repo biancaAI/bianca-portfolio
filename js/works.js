@@ -304,6 +304,19 @@ window.PORTFOLIO = {
       "preview": ""
     },
     {
+      "id": "work-26",
+      "title": "Moonlight Cocktail Halloween🎃🧹🧡",
+      "genre": "music",
+      "youtube": [
+        "L_1wNyZFW0M"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/L_1wNyZFW0M/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
       "id": "work-20",
       "title": "ウイスキー狂騒曲♪",
       "genre": "music",
