@@ -1,0 +1,18 @@
+/* Hand-drawn pen loops around the clickable props, replacing the boxy dashed hotspots. */
+.cafe-hotspot,.cafe-hotspot:hover,.cafe-hotspot:focus-visible{border-color:transparent;background:transparent;outline:none}
+.cafe-doodles{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.doodle{--ink:#9f5960;--paper:#ffe3db}
+.doodle-phone{--ink:#52695b;--paper:#e4edd9}.doodle-laptop{--ink:#567985;--paper:#dfedf2}.doodle-awards{--ink:#86621f;--paper:#fff0bf}.doodle-menu{--ink:#9a6857;--paper:#fbe9d6}
+.doodle path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.doodle-halo{stroke:var(--ink);stroke-width:4.5px;opacity:.28;transition:opacity .3s,stroke-width .3s}
+.doodle-line{stroke:var(--paper);stroke-width:2.4px;stroke-dasharray:9 7;animation:doodle-march 9s linear infinite;transition:stroke .3s,stroke-width .3s}
+.doodle-spark{stroke:var(--paper);stroke-width:2px;transform-box:fill-box;transform-origin:40% 55%;animation:doodle-twinkle 3.8s ease-in-out infinite}
+.doodle-phone path{animation-delay:-.7s}.doodle-laptop path{animation-delay:-1.4s}.doodle-awards path{animation-delay:-2.1s}.doodle-menu path{animation-delay:-2.8s}
+@keyframes doodle-march{to{stroke-dashoffset:-160}}
+@keyframes doodle-twinkle{0%,100%{opacity:1;transform:scale(1) rotate(0)}50%{opacity:.45;transform:scale(.75) rotate(20deg)}}
+
+/* Hover or keyboard focus on a prop: the pen line inks in and the sparkle pops. */
+.cafe-hotspots:has(.spot-tv:is(:hover,:focus-visible)) .doodle-tv .doodle-halo,.cafe-hotspots:has(.spot-phone:is(:hover,:focus-visible)) .doodle-phone .doodle-halo,.cafe-hotspots:has(.spot-laptop:is(:hover,:focus-visible)) .doodle-laptop .doodle-halo,.cafe-hotspots:has(.spot-awards:is(:hover,:focus-visible)) .doodle-awards .doodle-halo,.cafe-hotspots:has(.spot-menu:is(:hover,:focus-visible)) .doodle-menu .doodle-halo{opacity:.75;stroke-width:6px}
+.cafe-hotspots:has(.spot-tv:is(:hover,:focus-visible)) .doodle-tv :is(.doodle-line,.doodle-spark),.cafe-hotspots:has(.spot-phone:is(:hover,:focus-visible)) .doodle-phone :is(.doodle-line,.doodle-spark),.cafe-hotspots:has(.spot-laptop:is(:hover,:focus-visible)) .doodle-laptop :is(.doodle-line,.doodle-spark),.cafe-hotspots:has(.spot-awards:is(:hover,:focus-visible)) .doodle-awards :is(.doodle-line,.doodle-spark),.cafe-hotspots:has(.spot-menu:is(:hover,:focus-visible)) .doodle-menu :is(.doodle-line,.doodle-spark){stroke:#fff;stroke-width:3px;animation-duration:2.4s}
+
+@media(prefers-reduced-motion:reduce){.doodle path{animation:none}}

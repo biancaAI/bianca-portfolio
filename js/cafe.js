@@ -5,6 +5,7 @@
   works:{image:'002テレビ.png',title:'My Works',kicker:'THE LITTLE SCREEN, ENDLESS WORLDS.',description:'映像も、音楽も、イラストも。気になる世界をひとつ、どうぞ。',sections:[],point:[.082,.305],scale:5.2},
   contact:{image:'004電話.png',title:'Contact',kicker:'GOOD THINGS START WITH A HELLO.',description:'こんな世界をつくりたい。そんなお話を、聞かせてください。',sections:['contact'],point:[.055,.12],scale:6.2},
   about:{image:'001全体図.png',stay:true,title:'About me',kicker:'MEET YOUR CAFÉ HOST.',description:'可愛くて、楽しくて、元気が出る。Biancaのものづくりをご紹介。',sections:['about'],point:[.603,.435],scale:5.7},
+  cpp:{image:'003パソコン.png',title:'CPP',kicker:'CPP.',description:'務めさせていただいているCPPです。',sections:['cpp'],point:[.603,.435],scale:5.7},
   awards:{image:'005トロフィー.png',title:'Awards',kicker:'LITTLE MILESTONES, BIG GRATITUDE.',description:'ひとつひとつの挑戦と、いただいた大切な賞をこちらに。',sections:['awards'],point:[.122,.475],scale:5.4},
   menu:{image:'006メニュー.png',title:'Creative Menu',kicker:'WHAT SHALL WE CREATE TODAY?',description:'映像制作からビジュアルまで。ご注文は、どんな世界？',sections:['guide'],point:[.505,.83],scale:2.6}
  };
