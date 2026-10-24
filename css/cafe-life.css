@@ -36,7 +36,11 @@
 @keyframes paper-pop{0%{transform:translateY(3%) rotate(-5deg) scale(.95)}45%{transform:translateY(-1.5%) rotate(2.5deg) scale(1.02)}100%{transform:none}}
 @keyframes paper-idle{0%{transform:rotate(-.6deg)}100%{transform:rotate(.6deg) translateY(-.4%)}}
 @keyframes life-sun-figure{0%,100%{filter:brightness(1.03)}22%{filter:brightness(1.1) saturate(1.05)}41%{filter:brightness(.94)}76%{filter:brightness(1.08)}}
-.life-front{left:13.393%;top:54.521%;width:45.387%;height:45.479%}
+.cafe-life.is-hover .bianca-pose.is-on{translate:0 -1.5%;filter:drop-shadow(-.35vw .4vw .2vw #4a2a1566) drop-shadow(0 0 .05vw #6b4a3044) brightness(1.06)}
+/* Click target above the hotspots, cut to the paper outline of the pose on show. */
+.bianca-hit{position:absolute;pointer-events:none}
+.bianca-hit-area{position:absolute;padding:0;border:0;background:transparent;cursor:pointer;pointer-events:auto;outline:none}
+.cafe-experience[data-travel] .bianca-hit,.cafe-experience:not([data-view=home]) .bianca-hit{visibility:hidden}
 
-.cafe-experience:not([data-view=home]) .cafe-life *{animation-play-state:paused}
+.cafe-experience:not([data-view=home]):not([data-view=about]) .cafe-life *{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.cafe-life *{animation:none!important}.life-dust{display:none}}

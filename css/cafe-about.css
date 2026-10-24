@@ -1,0 +1,28 @@
+/* About me: the café itself stays as the backdrop, a framed portrait hangs over it, and the text card overlaps the frame. */
+:root{--frame-h:min(72vh,660px)}
+.cafe-experience .cafe-world{transition:transform 1150ms cubic-bezier(.22,.65,.16,1),filter .8s ease}
+.cafe-experience[data-view=about] .cafe-world{filter:brightness(.88) saturate(.95) blur(1.5px)}
+
+.about-frame{position:absolute;z-index:3;left:7vw;top:50%;height:var(--frame-h);aspect-ratio:3/4;margin:0;box-sizing:border-box;padding:calc(var(--frame-h)*.035);
+ border:calc(var(--frame-h)*.03) solid #8b5d39;border-image:linear-gradient(135deg,#b98656,#7a4d2c 30%,#a9764a 55%,#6d4326 80%,#9c6b42) 1;
+ background:#fbf5ea;box-shadow:inset 0 0 0 1px #d9c6a8,inset 0 2px 8px #6b4a3026,0 2px 0 #5a3820,0 18px 42px #2e1d1166,0 4px 10px #2e1d1140;
+ opacity:0;visibility:hidden;transform:translateY(-46%) rotate(-2.5deg) scale(.96);transition:opacity .6s ease,transform .8s cubic-bezier(.22,.65,.16,1),visibility 0s .8s}
+.about-frame img{display:block;width:100%;height:100%;object-fit:cover;box-shadow:inset 0 0 0 1px #0000001a}
+.about-frame figcaption{position:absolute;left:50%;bottom:calc(var(--frame-h)*-.075);translate:-50% 0;white-space:nowrap;padding:5px 16px 6px;border-radius:3px;
+ background:linear-gradient(#e9cf8e,#c9a35a);color:#4a3418;font:italic calc(13px + 2pt) Georgia,serif;letter-spacing:.5px;box-shadow:0 2px 4px #3a24124d,inset 0 1px 0 #fff3c9}
+.about-frame figcaption span{font-style:normal;font-size:.8em;letter-spacing:1.5px}
+.cafe-experience[data-view=about]:not([data-travel]) .about-frame{opacity:1;visibility:visible;transform:translateY(-50%) rotate(-2.5deg);transition:opacity .6s ease .15s,transform .9s cubic-bezier(.22,.65,.16,1) .15s,visibility 0s}
+
+/* The text card sits to the right and overlaps the frame's edge. */
+.cafe-sheet[data-scene=about]{top:50%;bottom:auto;left:calc(7vw + var(--frame-h)*.75 - 70px);right:6vw;max-height:min(74vh,700px);transform:translateY(-50%);background:rgba(251,245,234,.72);backdrop-filter:blur(10px)}
+.cafe-sheet[data-scene=about] #sheetBody>.room{padding:26px 4% 30px}
+.cafe-sheet[data-scene=about] .about-layout{padding:0 10px}
+.cafe-sheet[data-scene=about] .about-copy p{line-height:2}
+
+@media(max-width:759px){
+ :root{--frame-h:min(40vh,380px)}
+ .about-frame{left:50%;top:86px;transform:translateX(-50%) rotate(-2deg) scale(.96)}
+ .cafe-experience[data-view=about]:not([data-travel]) .about-frame{transform:translateX(-50%) rotate(-2deg)}
+ .cafe-sheet[data-scene=about]{top:calc(86px + var(--frame-h) - 24px);bottom:100px;left:16px;right:16px;max-height:none;transform:none}
+}
+@media(prefers-reduced-motion:reduce){.about-frame,.cafe-experience .cafe-world{transition:none}}
