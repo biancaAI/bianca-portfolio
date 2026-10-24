@@ -1,0 +1,42 @@
+/* Cinemagraph layer on the room photo: sunlight, lamps, steam, dust, and the paper Bianca.
+   Every coordinate is a % of the 1344×752 picture, so it follows fit() and the room zoom. */
+.cafe-life{position:absolute;overflow:hidden;pointer-events:none;contain:strict}
+.cafe-life>*{position:absolute}
+.life-sun,.life-window,.life-front{display:block;max-width:none!important;user-select:none}
+.life-sun,.life-window{inset:0;width:100%;height:100%}
+
+/* The sun breathes: a passing cloud dims it, leaves outside the window make it ripple. */
+.life-sun{mix-blend-mode:screen;opacity:.32;animation:life-sun 15s ease-in-out infinite}
+.life-sun.ripple{opacity:.6;animation:life-ripple 7s ease-in-out infinite alternate;-webkit-mask:radial-gradient(closest-side,#000 25%,#0000) 0 0/13% 19%,radial-gradient(closest-side,#000 15%,#0000) 4% 9%/9% 14%;mask:radial-gradient(closest-side,#000 25%,#0000) 0 0/13% 19%,radial-gradient(closest-side,#000 15%,#0000) 4% 9%/9% 14%}
+.life-window{mix-blend-mode:screen;opacity:.35;animation:life-sun 15s ease-in-out infinite}
+@keyframes life-sun{0%,100%{opacity:.45}22%{opacity:.8}41%{opacity:.08}58%{opacity:.15}76%{opacity:.7}}
+@keyframes life-ripple{0%{-webkit-mask-position:0 0,4% 9%;mask-position:0 0,4% 9%;opacity:.75}50%{opacity:.3}100%{-webkit-mask-position:2.4% 1.6%,1% 6%;mask-position:2.4% 1.6%,1% 6%;opacity:.7}}
+
+/* Shafts of light from the right-hand windows, slanting down to the floor. */
+.life-beams{inset:0;mix-blend-mode:screen;animation:life-beams 15s ease-in-out infinite}
+.life-beams i{top:-12%;height:95%;width:var(--w);left:var(--x);transform-origin:50% 0;transform:rotate(27deg);background:linear-gradient(90deg,#fff3d900,#fff1d0 45%,#ffe9c2 55%,#fff3d900);-webkit-mask:linear-gradient(#000 10%,#0009 55%,#0000);mask:linear-gradient(#000 10%,#0009 55%,#0000);filter:blur(6px);opacity:var(--o);animation:life-drift 11s ease-in-out infinite alternate;animation-delay:var(--d)}
+@keyframes life-beams{0%,100%{opacity:.75}22%{opacity:1}41%{opacity:.15}58%{opacity:.25}76%{opacity:.9}}
+@keyframes life-drift{to{transform:rotate(25.5deg) translateX(-6%)}}
+
+/* Pendant lamps glow softly, each at its own pace. */
+.life-lamps i{left:var(--x);top:var(--y);width:9%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(closest-side,#fff4d6cc,#ffd99a55 35%,#ffd99a00);mix-blend-mode:screen;animation:life-lamp 6.5s ease-in-out infinite alternate;animation-delay:var(--d)}
+@keyframes life-lamp{from{opacity:.5;scale:.9}to{opacity:1;scale:1.06}}
+
+/* Steam curling up from the latte. */
+.life-steam{left:20.6%;top:51%;width:5.4%;height:18%}
+.life-steam i{left:var(--x);bottom:0;width:38%;height:62%;border-radius:50%;background:radial-gradient(closest-side,#fffdf8bb,#fffdf800);filter:blur(5px);opacity:0;animation:life-steam 5.4s ease-out infinite;animation-delay:var(--d)}
+@keyframes life-steam{0%{opacity:0;transform:translateY(0) scale(.5,.6) skewX(0)}25%{opacity:.55}60%{opacity:.3;transform:translateY(-38%) scale(1,1) skewX(12deg)}100%{opacity:0;transform:translateY(-75%) scale(1.4,1.3) skewX(-10deg)}}
+
+.life-dust{inset:0;width:100%;height:100%;mix-blend-mode:screen}
+
+/* Bianca, cut out of paper like a Kami Usagi Rope puppet. One pose at a time. */
+.bianca-stage{inset:0;animation:life-sun-figure 15s ease-in-out infinite}
+.bianca-pose{position:absolute;display:block;max-width:none!important;opacity:0;visibility:hidden;transform-origin:50% 92%;filter:drop-shadow(-.25vw .18vw .12vw #4a2a1559) drop-shadow(0 0 .05vw #6b4a3044)}
+.bianca-pose.is-on{opacity:1;visibility:visible;animation:paper-pop .42s steps(3,end),paper-idle .6s steps(1,end) .42s infinite alternate}
+@keyframes paper-pop{0%{transform:translateY(3%) rotate(-5deg) scale(.95)}45%{transform:translateY(-1.5%) rotate(2.5deg) scale(1.02)}100%{transform:none}}
+@keyframes paper-idle{0%{transform:rotate(-.6deg)}100%{transform:rotate(.6deg) translateY(-.4%)}}
+@keyframes life-sun-figure{0%,100%{filter:brightness(1.03)}22%{filter:brightness(1.1) saturate(1.05)}41%{filter:brightness(.94)}76%{filter:brightness(1.08)}}
+.life-front{left:13.393%;top:54.521%;width:45.387%;height:45.479%}
+
+.cafe-experience:not([data-view=home]) .cafe-life *{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.cafe-life *{animation:none!important}.life-dust{display:none}}

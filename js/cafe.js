@@ -10,7 +10,7 @@
  };
  let view='home',busy=false,geometry={},lastSpot=null,sequence=0;
  const reduce=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
- function fit(){const w=document.documentElement.clientWidth,h=innerHeight,mobile=w<760;const areaH=mobile?h*.39:h;const areaY=mobile?Math.max(85,h*.17):0;const scale=Math.min(w/1344,areaH/752);const iw=1344*scale,ih=752*scale;geometry={x:(w-iw)/2,y:areaY+(areaH-ih)/2,w:iw,h:ih};for(const el of [$('.cafe-background'),$('.cafe-hotspots')])Object.assign(el.style,{left:geometry.x+'px',top:geometry.y+'px',width:iw+'px',height:ih+'px'});if(view!=='home')world.style.transform=zoom(scenes[view]);}
+ function fit(){const w=document.documentElement.clientWidth,h=innerHeight,mobile=w<760;const areaH=mobile?h*.39:h;const areaY=mobile?Math.max(85,h*.17):0;const scale=Math.min(w/1344,areaH/752);const iw=1344*scale,ih=752*scale;geometry={x:(w-iw)/2,y:areaY+(areaH-ih)/2,w:iw,h:ih};for(const el of [$('.cafe-background'),$('.cafe-life'),$('.cafe-hotspots')])Object.assign(el.style,{left:geometry.x+'px',top:geometry.y+'px',width:iw+'px',height:ih+'px'});if(view!=='home')world.style.transform=zoom(scenes[view]);}
  function zoom(scene){const x=geometry.x+geometry.w*scene.point[0],y=geometry.y+geometry.h*scene.point[1],s=scene.scale;return `translate(${innerWidth/2-x*s}px,${innerHeight/2-y*s}px) scale(${s})`;}
  const frames=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
  const wait=ms=>new Promise(r=>setTimeout(r,reduce()?0:ms));
