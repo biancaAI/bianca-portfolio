@@ -11,3 +11,8 @@
 /* The dock gained a seventh button for CPP; tighten it so all seven fit on a phone. */
 @media(max-width:759px){.cafe-dock{gap:0;padding:6px 4px}.cafe-dock button{padding:8px 4px}.cpp-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cpp-list li{padding:10px 10px 10px 28px}.cpp-list li:before{left:11px}}
 @media(prefers-reduced-motion:reduce){.cpp-list li{transition:none}}
+/* Menu room (受託案内): past work as soft tags and the form link as a café button. */
+.guide-text h4{margin:26px 0 10px;font:calc(13px + 2pt) Georgia,'Yu Mincho',serif;letter-spacing:1px}
+.guide-works{display:flex;flex-wrap:wrap;gap:9px 10px;margin:0 0 22px;padding:0;list-style:none}
+.guide-works li{padding:8px 15px;border:1px solid #fffaf0c9;border-radius:20px;background:#fffaf0a8;box-shadow:0 2px 8px #4a2f1d12}
+.guide-form{margin-top:10px;gap:14px;text-decoration:none;background:#78503d;color:#fff5e9}
