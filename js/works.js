@@ -35,10 +35,256 @@ window.PORTFOLIO = {
       "label": "MUSIC VIDEO",
       "name": "音楽 / MV",
       "loading": ""
+    },
+    {
+      "id": "aivideo",
+      "label": "AI VIDEO GALLERY",
+      "name": "AI Video Gallery",
+      "loading": ""
+    },
+    {
+      "id": "sitcom",
+      "label": "SITCOM",
+      "name": "シットコム",
+      "loading": ""
     }
   ],
   "featured": "work-1",
   "works": [
+    {
+      "id": "work-27",
+      "title": "和楽器バンド～紅金の宴～🍁✨️",
+      "genre": "aivideo",
+      "youtube": [
+        "Hs3eYcLzIts"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/Hs3eYcLzIts/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-26",
+      "title": "Moonlight Cocktail Halloween🎃🧹🧡",
+      "genre": "music",
+      "youtube": [
+        "L_1wNyZFW0M"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/L_1wNyZFW0M/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-28",
+      "title": "September Air Lyric Video",
+      "genre": "music",
+      "youtube": [
+        "zXTukE0k8Y4"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/zXTukE0k8Y4/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-20",
+      "title": "ウイスキー狂騒曲♪",
+      "genre": "music",
+      "youtube": [
+        "wCKeXv04B-k"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/wCKeXv04B-k/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-21",
+      "title": "Beans☆Beats",
+      "genre": "music",
+      "youtube": [
+        "0DzQc8wu2xU"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/0DzQc8wu2xU/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-22",
+      "title": "Valentine is mine♪",
+      "genre": "music",
+      "youtube": [
+        "_lrCTgc23Ng"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/_lrCTgc23Ng/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-23",
+      "title": "Gimlet＆Kir 🍸",
+      "genre": "music",
+      "youtube": [
+        "8xpLCUeJXhw"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/8xpLCUeJXhw/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-24",
+      "title": "カニラップ笑",
+      "genre": "music",
+      "youtube": [
+        "d8ntdVoU4ko"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/d8ntdVoU4ko/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-25",
+      "title": "UP & Down",
+      "genre": "music",
+      "youtube": [
+        "SfiJnRYHspw"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/SfiJnRYHspw/hqdefault.jpg",
+      "tools": [],
+      "description": "music by Hallucination Records",
+      "preview": ""
+    },
+    {
+      "id": "work-29",
+      "title": "全員関西弁の80年代アメリカ結婚式で「異議あり」が出た結果",
+      "genre": "sitcom",
+      "youtube": [
+        "QHjwosVL01Q"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/QHjwosVL01Q/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-30",
+      "title": "80年代アメリカで、彼女の関西弁の父に挨拶しに行った結果",
+      "genre": "sitcom",
+      "youtube": [
+        "X0OfeQBmneg"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/X0OfeQBmneg/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-31",
+      "title": "聞き間違いドライブスルー🍔🐨www",
+      "genre": "sitcom",
+      "youtube": [
+        "PpO38mq7wnA"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/PpO38mq7wnA/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-32",
+      "title": "カーナビ・シャンプーꉂ🤣w𐤔",
+      "genre": "sitcom",
+      "youtube": [
+        "RPx1uPG-_HE"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/RPx1uPG-_HE/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-33",
+      "title": "“けもの”シットコムwww🐶🐺🐦",
+      "genre": "sitcom",
+      "youtube": [
+        "gvOcLelHkQI"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/gvOcLelHkQI/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-34",
+      "title": "家庭用ウソ発見器を買ってきた嫁が怖すぎるwww",
+      "genre": "sitcom",
+      "youtube": [
+        "4VXJ4VnZCXU"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/4VXJ4VnZCXU/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-35",
+      "title": "コーヒー頼んだだけやのに、夢まで聞かれたwww",
+      "genre": "sitcom",
+      "youtube": [
+        "u_rwKsbZ9IQ"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/u_rwKsbZ9IQ/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-36",
+      "title": "告白の練習したら、練習でフラれたwww",
+      "genre": "sitcom",
+      "youtube": [
+        "NcXRb5WAreY"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/NcXRb5WAreY/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-37",
+      "title": "ペリカン宅配便 ～受け取り拒否したら、夫が返品された～",
+      "genre": "sitcom",
+      "youtube": [
+        "4neFYaARNoI"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/4neFYaARNoI/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
     {
       "id": "work-1",
       "title": "空想旅行",
@@ -301,97 +547,6 @@ window.PORTFOLIO = {
       "thumbnail": "",
       "tools": [],
       "description": "",
-      "preview": ""
-    },
-    {
-      "id": "work-26",
-      "title": "Moonlight Cocktail Halloween🎃🧹🧡",
-      "genre": "music",
-      "youtube": [
-        "L_1wNyZFW0M"
-      ],
-      "links": [],
-      "thumbnail": "https://i.ytimg.com/vi/L_1wNyZFW0M/hqdefault.jpg",
-      "tools": [],
-      "description": "",
-      "preview": ""
-    },
-    {
-      "id": "work-20",
-      "title": "ウイスキー狂騒曲♪",
-      "genre": "music",
-      "youtube": [
-        "wCKeXv04B-k"
-      ],
-      "links": [],
-      "thumbnail": "https://i.ytimg.com/vi/wCKeXv04B-k/hqdefault.jpg",
-      "tools": [],
-      "description": "",
-      "preview": ""
-    },
-    {
-      "id": "work-21",
-      "title": "Beans☆Beats",
-      "genre": "music",
-      "youtube": [
-        "0DzQc8wu2xU"
-      ],
-      "links": [],
-      "thumbnail": "https://i.ytimg.com/vi/0DzQc8wu2xU/hqdefault.jpg",
-      "tools": [],
-      "description": "",
-      "preview": ""
-    },
-    {
-      "id": "work-22",
-      "title": "Valentine is mine♪",
-      "genre": "music",
-      "youtube": [
-        "_lrCTgc23Ng"
-      ],
-      "links": [],
-      "thumbnail": "https://i.ytimg.com/vi/_lrCTgc23Ng/hqdefault.jpg",
-      "tools": [],
-      "description": "",
-      "preview": ""
-    },
-    {
-      "id": "work-23",
-      "title": "Gimlet＆Kir 🍸",
-      "genre": "music",
-      "youtube": [
-        "8xpLCUeJXhw"
-      ],
-      "links": [],
-      "thumbnail": "https://i.ytimg.com/vi/8xpLCUeJXhw/hqdefault.jpg",
-      "tools": [],
-      "description": "",
-      "preview": ""
-    },
-    {
-      "id": "work-24",
-      "title": "カニラップ笑",
-      "genre": "music",
-      "youtube": [
-        "d8ntdVoU4ko"
-      ],
-      "links": [],
-      "thumbnail": "https://i.ytimg.com/vi/d8ntdVoU4ko/hqdefault.jpg",
-      "tools": [],
-      "description": "",
-      "preview": ""
-    },
-    {
-      "id": "work-25",
-      "title": "UP & Down",
-      "genre": "music",
-      "youtube": [
-        "SfiJnRYHspw"
-      ],
-      "links": [],
-      "thumbnail": "https://i.ytimg.com/vi/SfiJnRYHspw/hqdefault.jpg",
-      "tools": [],
-      "description": "music by Hallucination Records",
       "preview": ""
     }
   ]

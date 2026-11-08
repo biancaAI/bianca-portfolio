@@ -37,7 +37,10 @@
 .cafe-sheet :is(p,li,h2,h3,h4,summary,a){text-shadow:0 1px 1px #fff7e970}
 @media(max-width:759px){.tv-bubble-count{top:auto;bottom:6px}.tv-letterbox-bottom{bottom:4%}.tv-letterbox-bottom>span{display:block;line-height:1}.tv-letterbox-bottom h1{line-height:1.2;margin-top:3px}}
 
-@media(max-width:759px){.tv-genre-bubble[data-genre="commercial"]{grid-column:span 2}.cafe-dock button{padding-inline:7px}.tv-letterbox-bottom{bottom:2%}}
+@media(max-width:759px){.cafe-dock button{padding-inline:7px}.tv-letterbox-bottom{bottom:2%}}
 
 #sheetBody #contact :is(.room-copy,.content-card p,.contact-link){text-shadow:1px 2px 1px #392416c7,3px 4px 5px #392416a6,5px 6px 12px #3924164d!important}
 @media(max-width:759px){.tv-genre-bubble>span:nth-child(2){min-width:0;flex:1}.tv-genre-bubble small{padding-right:16px}}
+/* Nine channels now: keep the bubble column short enough to clear the dock. */
+@media(min-width:760px){.tv-genres{top:9%}.tv-genres h2{margin:8px 0 14px}.tv-genre-bubbles{gap:7px}.tv-genre-bubble{min-height:40px;padding:6px 13px}.tv-genre-bubble small{margin-top:1px}.tv-genre-foot{margin-top:11px}}
+@media(min-width:760px) and (max-height:760px){.tv-genres{top:8%}.tv-genres h2{font-size:calc(22px + 2pt);margin:6px 0 10px}.tv-genre-bubbles{gap:5px}.tv-genre-bubble{min-height:33px;padding:4px 11px}.tv-bubble-icon{font-size:calc(19px + 2pt)}}

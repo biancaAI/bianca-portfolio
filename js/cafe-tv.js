@@ -10,8 +10,10 @@
  $('#cafeExperience').insertBefore(root,$('.cafe-topbar'));
  const genres=[
   {id:'all',label:'ALL',note:'ぜんぶ、どうぞ',icon:'✦',color:'#f5dbc8',ink:'#85523b',test:()=>true},
+  {id:'aivideo',label:'AI VIDEO GALLERY',note:'AIでえがく、ひとさじ',icon:'❋',color:'#fde3c2',ink:'#9a5f2a',test:w=>w.genre==='aivideo'},
   {id:'music',label:'MV',note:'音楽にときめく',icon:'♫',color:'#eadcf8',ink:'#795695',test:w=>w.genre==='music'},
-  {id:'film',label:'FILM',note:'小さな物語へ',icon:'▷',color:'#dcebcf',ink:'#577144',test:w=>w.genre!=='music'},
+  {id:'sitcom',label:'SITCOM',note:'笑ってひと息',icon:'☺',color:'#d6ece6',ink:'#3f7468',test:w=>w.genre==='sitcom'},
+  {id:'film',label:'FILM',note:'小さな物語へ',icon:'▷',color:'#dcebcf',ink:'#577144',test:w=>!['music','aivideo','sitcom'].includes(w.genre)},
   {id:'action',label:'ACTION',note:'胸が高鳴る',icon:'↗',color:'#ffd8c4',ink:'#ad5940',test:w=>w.genre==='action'},
   {id:'commercial',label:'COMMERCIAL',note:'ひらめきを一杯',icon:'✿',color:'#f8dfe5',ink:'#a15f75',test:w=>w.genre==='commercial'},
   {id:'fantasy',label:'FANTASY',note:'空想のおさんぽ',icon:'✧',color:'#d9eaf2',ink:'#557c91',test:w=>w.genre==='fantasy'},
@@ -23,7 +25,7 @@
  const getCurrent=()=>items[index];
  function fit(){const w=document.documentElement.clientWidth,h=innerHeight,mobile=w<760;let scale,x,y;if(mobile){scale=w*1.55/1344;x=w*.04-222*scale;y=Math.max(100,h*.15);}else{scale=Math.max(w/1344,h/752);x=(w-1344*scale)/2;y=(h-752*scale)/2;}root.style.setProperty('--tv-x',x+'px');root.style.setProperty('--tv-y',y+'px');root.style.setProperty('--tv-w',1344*scale+'px');root.style.setProperty('--tv-h',752*scale+'px');$('#cafeDetail').style.setProperty('--tv-bg-x',x+'px');$('#cafeDetail').style.setProperty('--tv-bg-y',y+'px');$('#cafeDetail').style.setProperty('--tv-bg-w',1344*scale+'px');$('#cafeDetail').style.setProperty('--tv-bg-h',752*scale+'px');}
  function stop(){request++;clearTimeout(statusTimer);if(player){try{player.destroy();}catch{}player=null;}$('#tvPlayerMount').replaceChildren();$('#tvPoster').hidden=!items.length;$('#tvPlayerStatus').textContent='';root.dataset.playing='false';}
- function metadata(){const work=getCurrent();root.dataset.channel=work?.channelKey||'';root.dataset.genre=activeGenre;$('#tvChannel').textContent=work?'CH '+String(index+1).padStart(2,'0')+' / '+String(items.length).padStart(2,'0'):'NO CHANNEL YET';$('#tvWorkTitle').textContent=work?.displayTitle||genres.find(g=>g.id===activeGenre).label;$('#tvGenreLabel').textContent=work?(work.genre==='music'?'MV':data.genres.find(g=>g.id===work.genre)?.label||'FILM'):'STAY TUNED';$('#tvYoutubeLink').hidden=!work;if(work)$('#tvYoutubeLink').href='https://www.youtube.com/watch?v='+work.videoId;$('#tvEmpty').hidden=!!work;$('#tvPoster').hidden=!work;$('#tvPrevious').disabled=$('#tvNext').disabled=items.length<2;
+ function metadata(){const work=getCurrent();root.dataset.channel=work?.channelKey||'';root.dataset.genre=activeGenre;$('#tvChannel').textContent=work?'CH '+String(index+1).padStart(2,'0')+' / '+String(items.length).padStart(2,'0'):'NO CHANNEL YET';$('#tvWorkTitle').textContent=work?.displayTitle||genres.find(g=>g.id===activeGenre).label;$('#tvGenreLabel').textContent=work?(work.genre==='music'?'MV':work.genre==='aivideo'?'AI VIDEO GALLERY':data.genres.find(g=>g.id===work.genre)?.label||'FILM'):'STAY TUNED';$('#tvYoutubeLink').hidden=!work;if(work)$('#tvYoutubeLink').href='https://www.youtube.com/watch?v='+work.videoId;$('#tvEmpty').hidden=!!work;$('#tvPoster').hidden=!work;$('#tvPrevious').disabled=$('#tvNext').disabled=items.length<2;
   if(work){const img=$('#tvPosterImage');img.src='https://i.ytimg.com/vi/'+work.videoId+'/hqdefault.jpg';img.alt=work.displayTitle+'のYouTubeサムネイル';$('#tvPoster').setAttribute('aria-label',work.displayTitle+'をテレビで再生');}
   document.querySelectorAll('.tv-genre-bubble').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.genre===activeGenre)));
  }
