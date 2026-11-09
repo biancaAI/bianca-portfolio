@@ -286,6 +286,32 @@ window.PORTFOLIO = {
       "preview": ""
     },
     {
+      "id": "work-38",
+      "title": "【急いでんねん！】ポイントカード作ろうとしたら、おかんが来た",
+      "genre": "sitcom",
+      "youtube": [
+        "Bvxrc4xNplc"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/Bvxrc4xNplc/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
+      "id": "work-39",
+      "title": "店員さん、それベーグルやなくてビーグルや🥯🐶【聞き間違いシットコムその2】",
+      "genre": "sitcom",
+      "youtube": [
+        "GhHF9k1hMGg"
+      ],
+      "links": [],
+      "thumbnail": "https://i.ytimg.com/vi/GhHF9k1hMGg/hqdefault.jpg",
+      "tools": [],
+      "description": "",
+      "preview": ""
+    },
+    {
       "id": "work-1",
       "title": "空想旅行",
       "genre": "fantasy",
